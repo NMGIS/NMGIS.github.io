@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## Projects
 
-You can use the [editor on GitHub](https://github.com/NMGIS/NMGIS.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+[Spokane, WA Crime - CompStat Report Vizualization](https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/) 
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
