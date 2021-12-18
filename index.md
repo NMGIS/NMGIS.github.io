@@ -2,7 +2,6 @@
 
 [Spokane, WA Crime - CompStat Report Vizualization](https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/) 
 
-https://github.com/NMGIS/NMGIS.github.io/blob/9e07b82ae186bdabba1a534ebd06d7b9ad4620c4/Spokane,%20WA%20Crime%20-%20CompStat%20Report%20Visualization.jpg
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
