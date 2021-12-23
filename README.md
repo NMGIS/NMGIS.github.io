@@ -20,10 +20,10 @@ WORK IN PROGRESS
 - Displaying routing capability, solve some routing issue
 - using OSM data and JSOM?
 
-# I need a project demonstrating using ArcGIS WebAppBuilder (Developer Edition) or Experience builder
+## I need a project demonstrating using ArcGIS WebAppBuilder (Developer Edition) or Experience builder
 -Hosted on GitHub Pages
 
-# 3D Q'melin model
+## 3D Q'melin model
 -GPS trails
   * Display trails as color coded as shown on tree markings
 -Need LIDAR point cloud
