@@ -14,6 +14,9 @@ WORK IN PROGRESS
 ## Parcel Fabic creation using a model/script - Probably work on this first
 - https://www.youtube.com/watch?v=zvTSIHKHC54&t=1s timestamp: 37:00
 - Script or even complete geoprocessing tool/toolbox to automate the Parcel Fabric Process
+- Two Models or ArcGIS Tasks?
+  - ArcMap Conversion
+  - From Scratch
 
 
 ## Routing Project
