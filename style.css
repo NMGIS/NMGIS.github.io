@@ -93,7 +93,10 @@ blockquote p:last-child {
 /* Full size background image */
 html, #container, .inner { background-color:transparent;}
 html {
-  background:url(background.jpg) center center no-repeat fixed;
+  /* background:url(background.jpg) center center no-repeat fixed; */
+  background-image: linear-gradient(to bottom right, rgb(7, 7, 7), rgb(153, 153, 153));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size:cover;
 }
 body {
@@ -137,5 +140,21 @@ ul.main-menu li a.active {
   display:block;
 }
 
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-gap: 25px 25px;
+  grid-template-columns: auto auto auto;
+  background-color: #fcfcfc00;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 
 
