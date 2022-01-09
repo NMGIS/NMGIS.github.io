@@ -144,9 +144,11 @@ ul.main-menu li a.active {
 .grid-container {
   display: grid;
   /* grid-gap: 1px 1px; */
-  grid-template-columns: repeat(2,1fr);
+  /* previous working grid-template */
+  /* grid-template-columns: repeat(2,1fr); */ 
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   /* grid-auto-rows: minmax(180px, 180px); */
-  /* grid-gap: 30px; */
+  grid-gap: 30px;
 }
 
 .grid-item {
