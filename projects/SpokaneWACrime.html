@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>NMGIS</title>
+    <meta name="description" content="Nevin McIntyre's GIS portflio">
+    <meta name="author" content="Nevin Mcintyre">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="/favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ba1862a7d2.js" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  <body>
+  
+    <header id="header">
+        <img src="/logo.png">
+        <!-- <h1>NMGIS</h1> -->
+        
+        <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+        <ul class="main-menu">
+          <li hidden><a href="#SpokaneCrime"></a></li>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="/index.html#projects">Projects</a></li>
+          <li><a href="/index.html#Data">Data</a></li>
+          <li><a href="/index.html#stuffIfindinteresting">Stuff I Find Interesting</a></li>
+        </ul>                 
+      </header>
+     
+      <div id="container">
+        <div class="inner">
+          <div id="content"> 
+            <div id="SpokaneCrime" class="content-region hide">
+              <h2><u style="text-decoration-color:#EF6D3D">Spokane WA, Crime - 2021 CompStat Report Visualization</u></h1>
+              <p>
+                According to <a href="https://www.alarms.org/top-100-most-dangerous-cities-in-america/" target="_blank" rel="noopener noreferrer">Alarms.org</a>, Spokane ranks #2 in the Top 100 Most Dangerous Large Cities in America. Spokane PD releases a weekly <a href="https://my.spokanecity.org/police/prevention/compstat/" target="_blank" rel="noopener noreferrer">CompStat</a> report geographically displaying crime totals within police districts. I've taken 2021 year's end report and created a series of dashboard to better understand which crimes are occuring in each district. Spokane PD is in the process of switching to the <a href="https://www.fbi.gov/services/cjis/ucr/nibrs" target="_blank" rel="noopener noreferrer">NIBRS</a> which may better decribe the extrodinarily high larceny rates. 2010 Census data was used to calculate crime per capita (CPC). This will be updated to the 2020 data once available.
+              </p>
+              <a href="https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/page/Crime-Per-Capita/"><img src="/mappng/SpokaneCrimeLarge.png" alt="Spokane WA, Crime" class="center"></a>
+              <br>
+              <p style="text-align:center"><a href="https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/page/Crime-Per-Capita/">View Map</a></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+      <footer>
+        <a href="https://github.com/NMGIS"><i class="fab fa-github fa-3x"></i></a>
+        <a href="https://twitter.com/NevinMcIntyre"><i class="fab fa-twitter-square fa-3x"></i></a>
+        <a href="https://linkedin.com/in/nevinmcintyregis"><i class="fab fa-linkedin fa-3x"></i></a>
+      </footer>
+      
+      <!-- Load additional JS scripts here -->
+      <script type="text/javascript" src="/script.js"></script>
+        
+  </body>
+  </html>
