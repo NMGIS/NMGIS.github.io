@@ -158,8 +158,10 @@ ul.main-menu li a.active {
   text-align: center;
 }
 
-.center {
+.largepng {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
+  width: 100%;
 }
