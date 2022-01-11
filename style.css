@@ -162,6 +162,10 @@ ul.main-menu li a.active {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
-  width: 100%;
+}
+
+.projecthead {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color:#EF6D3D
 }

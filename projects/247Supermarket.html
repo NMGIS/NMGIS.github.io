@@ -35,7 +35,7 @@
         
         <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
         <ul class="main-menu">
-          <li hidden><a href="#SpokaneCrime"></a></li>
+          <li hidden><a href="#247Supermarket"></a></li>
           <li><a href="/index.html#about">About</a></li>
           <li><a href="/index.html#projects">Projects</a></li>
           <li><a href="/index.html#Data">Data</a></li>
@@ -46,16 +46,32 @@
       <div id="container">
         <div class="inner">
           <div id="content"> 
-            <div id="SpokaneCrime" class="content-region hide">
-              <h2 class="projecthead">Spokane WA, Crime - 2021 CompStat Report Visualization</h1>
+            <div id="247Supermarket" class="content-region hide">
+              <h2 class="projecthead">24/7 Supermarket Map</h2>
+              <!-- <h2 style="text-align:center"><u style="text-decoration-color:#EF6D3D">24/7 Supermarket Map</u></h2> -->
               <br>
               <p>
-                According to <a href="https://www.alarms.org/top-100-most-dangerous-cities-in-america/" target="_blank" rel="noopener noreferrer">Alarms.org</a>, Spokane ranks #2 in the Top 100 Most Dangerous Large Cities in America. Spokane PD releases a weekly <a href="https://my.spokanecity.org/police/prevention/compstat/" target="_blank" rel="noopener noreferrer">CompStat</a> report geographically displaying crime totals within police districts. I've taken the 2021 year's end report and created a series of dashboards to better understand which crimes are occurring within each district. Spokane PD is in the process of switching to the <a href="https://www.fbi.gov/services/cjis/ucr/nibrs" target="_blank" rel="noopener noreferrer">NIBRS</a> which may better describe the extraordinarily high larceny rates. 2010 Census data was used to calculate crime per capita (CPC). This will be updated to the 2020 data once available.
+                I created an interactive map displaying 24/7 supermarkets in the conterminous U.S.A. The goal of this project was to build a living supermarket map; users are expected to add/remove stores as needed. The application displays two layers: At the initial extent, the dominant (largest count) store determines the symbology of each state. Once the map is zoomed in, individual point locations of stores are displayed. Please feel free to contribute. This map, data and instruction on how to contribute can be found on <a href= "https://github.com/NMGIS/24-7-Supermarket-Map.github.io">GitHub</a>. 
+              <br>
+              <br>
+              <a href="https://nmgis.github.io/24-7-Supermarket-Map.github.io/"><img src="/mappng/SupermarketLarge.png" alt="Spokane WA, Crime" class="largepng"></a>
+              <br>
+              <p style="text-align:center"><a href="https://nmgis.github.io/24-7-Supermarket-Map.github.io/">View Map</a></p>
+              <br>
+              <h4>What was used:</h4> 
+              <p>
+                <ul>
+                  <li>ArcGIS API for Javascript 4.18</li>
+                  <li>GeoJSON</li>
+                  <li>GitHub</li>
+                  <li>Pandas & GeoPandas</li>
+                  <li>Python 3.9.7</li>
+                </ul>
               </p>
-              <br>
-              <a href="https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/page/Crime-Per-Capita/"><img src="/mappng/SpokaneCrimeLarge.png" alt="Spokane WA, Crime" class="largepng"></a>
-              <br>
-              <p style="text-align:center"><a href="https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/page/Crime-Per-Capita/">View Map</a></p>
+              <h4> How it works: </h4>
+              <p>
+                The ArcGIS API for Javascript drives the application. GitHub pages is used to host the application, data and execute a spatial join. Three GeoJSON layers are used: Stores.GeoJSON (point type), States.GeoJSON (polygon type), StatesCount.GeoJSON (polygon type). A spatial join occurs (to create the StatesCount.GeoJSON), whenever a store is added to the Stores.GeoJSON. GitHub actions executes this join by determining if the Stores.GeoJSON has been modified.
+              </p>
             </div>
             
           </div>
