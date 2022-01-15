@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>NMGIS</title>
+    <meta name="description" content="Nevin McIntyre's GIS portflio">
+    <meta name="author" content="Nevin Mcintyre">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="/favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ba1862a7d2.js" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  <body>
+  
+    <header id="header">
+        <img src="/logo.png">
+        <!-- <h1>NMGIS</h1> -->
+        
+        <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+        <ul class="main-menu">
+          <li hidden><a href="#MarionIL"></a></li>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="/index.html#projects">Projects</a></li>
+          <li><a href="/index.html#Data">Data</a></li>
+          <li><a href="/index.html#stuffIfindinteresting">Stuff I Find Interesting</a></li>
+        </ul>                 
+      </header>
+     
+      <div id="container">
+        <div class="inner">
+          <div id="content"> 
+            <div id="MarionIL" class="content-region hide">
+              <h2 class="projecthead">Marion County Illinois - Precinct Wall Map</h1>
+              <br>
+              <p>
+                Here's a quick 1-hour 24x36 wall map I made for Marion County, IL. The goal here was to display precinct boundaries and labels. Other information is just for reference.
+              </p>
+              <a href="/mappng/MarionLarge.png"><img src="/mappng/MarionLarge.png" alt="Marion County Precinct" class="largepng"></a>
+              <br>
+              <p style="text-align:center"><a href="/mappng/MarionLarge.png">View Map</a></p>
+              <br>
+              <p>
+                Lets face it, ESRI default pastel colors (above) work well when symbolizing and labeling this many features. However, it doesn't mean I have to like it. Below are some other versions. Vote which you like best! 
+              </p>
+              <p style="font-size:11px">**These took an additional hour or two :)
+              </p>
+              <a href="/mappng/MarionLarge2.png"><img src="/mappng/MarionLarge2.png" alt="Marion County Precinct 2" class="largepng"></a>
+              <br>
+              <a href="/mappng/MarionLarge3.png"><img src="/mappng/MarionLarge3.png" alt="Marion County Precinct 3" class="largepng"></a>
+              <br>
+              <a href="/mappng/MarionLarge4.png"><img src="/mappng/MarionLarge4.png" alt="Marion County Precinct 3" class="largepng"></a>
+              <br>
+              <style>.embed-container {position: relative; height: 0; padding-bottom:80%; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe name="survey123webform" width="500" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Marion Map Poll" src="//survey123.arcgis.com/share/871562a1d9a14353a8241b519785e878?hide=navbar,header" allow="geolocation https://survey123.arcgis.com; camera https://survey123.arcgis.com"></iframe></div><script>var survey123webform = document.getElementsByName('survey123webform')[0];window.addEventListener("message",e=>{if(e.data){var t=JSON.parse(e.data);"survey123:onFormLoaded"===t.event&&t.contentHeight&&(survey123webform.parentNode.style.height=t.contentHeight+"px")&&(survey123webform.parentNode.style["padding-bottom"]="unset")}});</script>
+
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+  
+      <footer>
+        <a href="https://github.com/NMGIS"><i class="fab fa-github fa-3x"></i></a>
+        <a href="https://twitter.com/NevinMcIntyre"><i class="fab fa-twitter-square fa-3x"></i></a>
+        <a href="https://linkedin.com/in/nevinmcintyregis"><i class="fab fa-linkedin fa-3x"></i></a>
+      </footer>
+      
+      <!-- Load additional JS scripts here -->
+      <script type="text/javascript" src="/script.js"></script>
+        
+  </body>
+  </html>
