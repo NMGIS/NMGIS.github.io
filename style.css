@@ -177,3 +177,28 @@ ul.main-menu li a.active {
   text-decoration: underline;
   text-decoration-color:#EF6D3D;
 }
+
+.figcap {
+  font-size: x-small;
+  text-align: center;
+  color: black;
+}
+
+.figcaps {
+  text-align: center;
+  font-size: x-small;
+}
+
+.white-box {
+  background-color: white;
+}
+
+table, th, td {
+  border: 1px solid white;
+  text-align: center;
+}
+
+.big {
+  font-size: larger;
+  font-weight: bolder;
+}

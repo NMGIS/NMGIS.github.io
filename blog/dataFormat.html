@@ -3,7 +3,7 @@
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
-    <title>Data Format Blog</title>
+    <title>Data Format, Bias, Credibility, Ethics, and Privacy!</title>
     <meta name="description" content="Nevin McIntyre's GIS portflio">
     <meta name="author" content="Nevin Mcintyre">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
@@ -31,15 +31,14 @@
   
     <header id="header">
         <img src="/logo.png">
-        <!-- <h1>NMGIS</h1> -->
-        
+
         <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
         <ul class="main-menu">
           <li hidden><a href="#dataFormat"></a></li>
           <li><a href="https://nevinm.com/#about">About</a></li>
           <li><a href="https://nevinm.com/#projects">Projects</a></li>
           <li><a href="https://nevinm.com/#data">Data</a></li>
-          <li><a href="https://nevinm.com/#stuffIfindinteresting">Stuff I Find Interesting</a></li>
+          <li><a href="https://nevinm.com/#resources">Resources</a></li>
         </ul>                 
       </header>
      
@@ -47,36 +46,157 @@
         <div class="inner">
           <div id="content"> 
             <div id="dataFormat" class="content-region hide">
-              <h2 class="projecthead">Crooks Fire dNBR - Google Earth Engine</h1>
+              <h2 class="projecthead">Data Format, Bias, Credibility, Ethics, and Privacy!</h1>
               <br>
               <p>
-                Using Google Earth Engine, Landsat 9, and NIFC open data, I created an application to show the Normalized Burn Ratio (bNBR) of the Crooks Fire. The Crooks Fire began on 4/18/2022 which was located about 10 miles south of Prescott, Arizona. The fire was 100% contained as of June 24, 2022 which resulted in 9,402 acres of land burnt. The primary fules involved were: Timber(Litter and Understory), Chaparral, and brush. As of 7/2/2022, the cause is still listed as "undetermined".
+                I've recently been working on obtaining the Google Data Analytics Professional certificate on <a href="https://www.coursera.org/professional-certificates/google-data-analytics"><b>Coursera</b></a>, and while much of it is review, I've really been enjoying it. I've been impressed with the course, <a href="https://www.coursera.org/learn/data-preparation"><em><b>Prepare Data for Exploration</em></b></a>, which has a ton of useful terminology and information for anyone handling data on a daily basis. Below is some terminology & information I've found useful. Note: Tables and images are from the course. 
               </p>
+              <h3 class="methodsHead">Data formats in practice</h3>
+              <figure>
+              <div class="white-box">
+              <img src="/images/dataformatflowchart.png" class="largepng" alt="data format flow chart">  
+              <figcaption class="figcaps">source: <a href="https://www.coursera.org/professional-certificates/google-data-analytics">Prepare Data for Exploration, Google Data Analytics Professional Certificate</a></figcaption>
+              </figure>
+              </div>
               <br>
-              <a href="https://nevinmcintyregis.users.earthengine.app/view/crooksfirednbr"><img src="/mappng/CrooksfireLarge.png" alt="Google Earth Engine Crooks Fire Application" class="largepng"></a>
+              <img src="/images/pvss.png" class="largepng" alt="Primary vs secondary header">
+              <figcaption class="figcaps">source: <a href="https://www.coursera.org/professional-certificates/google-data-analytics">Prepare Data for Exploration, Google Data Analytics Professional Certificate</a></figcaption> 
+              <br>   
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <p>Data Format Classification</p>
+                    </th>
+                    <th scope="col">
+                      <p>Definition</p>
+                    </th>
+                    <th scope="col">
+                      <p>Examples</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Primary data</p>
+                    </td>
+                    <td>
+                      <p>Collected by a researcher from first-hand sources</p>
+                    </td>
+                    <td>
+                      <p>- Data from an interview you conducted<br>
+                        - Data from a survey returned from 20 participants<br>
+                        - Data from questionnaires you got back from a group of workers</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Secondary data</p>
+                    </td>
+                    <td>
+                      <p>Gathered by other people or from other research
+                      </p>
+                    </td>
+                    <td>
+                      <p>- Data you bought from a local data analytics firm's customer profiles<br>
+                        - Demographic data collected by a university<br>
+                        - Census data gathered by the federal government</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               <br>
-              <p style="text-align:center"><a href="https://nevinmcintyregis.users.earthengine.app/view/crooksfirednbr">View Map</a></p>
-              <h3 class="methodsHead">Methods and Instructions</h3>
-              <p>If you're at all interested in replicating this work, read below. While learning and setting up Google Earth Engine wasn't as easy as I expected; If I wanted to replicate this application for other fires, it would be easy to do so. Why? Google Earth Engine's <a href="https://developers.google.com/earth-engine/datasets/catalog">data catalog</a> is ready and waiting. I've outlined the steps below and have shared my JS code. Note: you can also install GEE api in <a href="https://developers.google.com/earth-engine/guides/python_install">Python</a></p>
-              <ol>
-                <li><a href="https://earthengine.google.com/">Create a Google</a> - click "Sign Up" at the top right of page</li>
-                <li>Navigate to <a href="https://code.earthengine.google.com/">Earth Engine Code Editor</a></li>
-                <li><a href="https://developers.google.com/earth-engine/cloud/code_editor_quickstart">Create a new Cloud Project</a></li> 
-                <li>Write the Javascript....</li>
-                <ul>
-                  <li>Some stuff you'll need to change:</li>
-                  <li>geojson boundary</li>
-                  <li>Landsat images</li>
-                  <li>Color scheme - I chose a color scheme which best represented my data</li>
-                </ul>
-                <li>Save and Run the Script</li>
-                <li>Create the app</li>
-                <br>
-                <img src="/mappng/earthengineCodeEditor.jpg">
-              </ol>
-                <br>
-                <p>Here's the Javascript (you will need a Google Earth Engine account to view): <a href="https://code.earthengine.google.com/e996f1c586c4d5be9e163d73290e78fb">https://code.earthengine.google.com/e996f1c586c4d5be9e163d73290e78fb</a></p>
-                <p>You can also GIT clone the repository: <br><code>git clone https://earthengine.googlesource.com/users/NevinMcIntyreGIS/LandsatComposite</code></p>              
+              <img src="/images/ivse.png" class="largepng" alt="Internal vs External header">
+              <figcaption class="figcaps">source: <a href="https://www.coursera.org/professional-certificates/google-data-analytics">Prepare Data for Exploration, Google Data Analytics Professional Certificate</a></figcaption> 
+              <br>
+              <table><thead><tr><th scope="col"><p>Data Format Classification</p></th><th scope="col"><p>Definition</p></th><th scope="col"><p>Examples</p></th></tr></thead><tbody><tr><td><p>Internal data</p></td><td><p>Data that lives inside a company's own systems
+              </p></td><td><p>- Wages of employees across different business units tracked by HR<br>
+              - Sales data by store location <br>
+              - Product inventory levels across distribution centers</p></td></tr><tr><td><p>External data</p></td><td><p>Data that lives outside of a company or organization</p></td><td><p>- National average wages for the various positions throughout your organization<br>
+              - Credit reports for customers of an auto dealership</p></td></tr></tbody></table>
+              <br>
+              <img src="/images/cvsd.png" class="largepng" alt="Continuous vs Discrete header">
+              <figcaption class="figcaps">source: <a href="https://www.coursera.org/professional-certificates/google-data-analytics">Prepare Data for Exploration, Google Data Analytics Professional Certificate</a></figcaption> 
+              <br>
+              <table><thead><tr><th scope="col"><p>Data Format Classification</p></th><th scope="col"><p>Definition</p></th><th scope="col"><p>Examples</p></th></tr></thead><tbody><tr><td><p>Continuous data</p></td><td><p>Data that is measured and can have almost any numeric value</p></td><td><p>- Height of kids in third grade classes (52.5 inches, 65.7 inches)<br>
+                - Runtime markers in a video
+                - Temperature</p></td></tr><tr><td><p>Discrete data</p></td><td><p>Data that is counted and has a limited number of values</p></td><td><p>- Number of people who visit a hospital on a daily basis (10, 20, 200)<br>
+                - Room's maximum capacity allowed<br>
+                - Tickets sold in the current month</p></td></tr></tbody></table>
+              <br>
+              <img src="/images/qualvsquan.png" class="largepng" alt="Qualitative vs Quantitative header">
+              <figcaption class="figcaps">source: <a href="https://www.coursera.org/professional-certificates/google-data-analytics">Prepare Data for Exploration, Google Data Analytics Professional Certificate</a></figcaption> 
+              <br>
+              <table><thead><tr><th scope="col"><p>Data Format Classification</p></th><th scope="col"><p>Definition</p></th><th scope="col"><p>Examples</p></th></tr></thead><tbody><tr><td><p>Qualitative</p></td><td><p>Subjective and explanatory measures of qualities and characteristics</p></td><td><p>- Exercise activity most enjoyed<br>
+                - Favorite brands of most loyal customers<br>
+                - Fashion preferences of young adults</p></td></tr><tr><td><p>Quantitative</p></td><td><p>Specific and objective measures of numerical facts</p></td><td><p>- Percentage of board certified doctors who are women<br>
+                - Population of elephants in Africa<br>
+                - Distance from Earth to Mars</p></td></tr></tbody></table>
+              <br>
+              <img src="/images/nvso.png" class="largepng" alt="Nominal vs Ordinal header">
+              <figcaption class="figcaps">source: <a href="https://www.coursera.org/professional-certificates/google-data-analytics">Prepare Data for Exploration, Google Data Analytics Professional Certificate</a></figcaption>
+              <br>
+              <table><thead><tr><th scope="col"><p>Data Format Classification</p></th><th scope="col"><p>Definition</p></th><th scope="col"><p>Examples</p></th></tr></thead><tbody><tr><td><p>Nominal</p></td><td><p>A type of qualitative data that isn't categorized with a set order</p></td><td><p>- First time customer, returning customer, regular customer<br>
+                - New job applicant, existing applicant, internal applicant<br>
+                - New listing, reduced price listing, foreclosure</p></td></tr><tr><td><p>Ordinal</p></td><td><p>&nbsp;A type of qualitative data with a set order or scale</p></td><td><p>- Movie ratings (number of stars: 1 star, 2 stars, 3 stars)<br>
+                - Ranked-choice voting selections (1st, 2nd, 3rd)<br>
+                - Income level (low income, middle income, high income)</p></td></tr></tbody></table> 
+              <br>
+              <img src="/images/svsu.png" class="largepng" alt="Structured vs Unstructured header">
+              <figcaption class="figcaps">source: <a href="https://www.coursera.org/professional-certificates/google-data-analytics">Prepare Data for Exploration, Google Data Analytics Professional Certificate</a></figcaption>
+              <br>
+              <table><thead><tr><th scope="col"><p>Data Format Classification</p></th><th scope="col"><p>Definition</p></th><th scope="col"><p>Examples</p></th></tr></thead><tbody><tr><td><p>Structured data</p></td><td><p>Data organized in a certain format, like rows and columns</p></td><td><p>- Expense reports<br>
+                - Tax returns<br>
+                - Store inventory</p></td></tr><tr><td><p>Unstructured data</p></td><td><p>Data that isn't organized in any easily identifiable manner</p></td><td><p>- Social media posts<br>
+                - Emails<br>
+                - Videos</p></td></tr></tbody></table>
+              <br>
+              <h3 class="methodsHead">Understanding bias in data</h3>
+              <ul>
+                <li class="big">Ovserver bias</li>
+                <p>- AKA experimenter bias/ research bias: the tendency for different people to obserce things differently <br>
+                - Example: we both observe the color of a truck: I report Red, you report Maroon</p>
+                <li class="big">Interpretation bias</li>
+                <p>- The tendency to always interpret ambiguous situations in a positive or negatice way<br>
+                  - Example: A friend sends a text message which I intpret as rude. You read it and think its friendly
+                </p>
+                <li class="big">Confirmation bias</li>
+                <p>- The tendency to search for or interpret information in a way that confirms pre-existing beliefs<br> 
+                  - Example: I consider Reaper to the best DAW on the market since I've been using for 2+ years now exclusively
+                </p>
+              </ul>
+              <br>
+              <h3 class="methodsHead">Data Credibility</h3>
+              <p>ROCCC - Not mine, but a great acronym I think!</p>
+              <ul>
+                <li><b><u>R</b></u>eliable - accurate, complete and unbiased data</li> 
+                <li><b><u>O</b></u>riginal - validate the data with the original source</li>
+                <li><b><u>C</b></u>omprehensive - all critical information needed</li>
+                <li><b><u>C</b></u>urrent - up to date (when needed), historic data is great too!</li>
+                <li><b><u>C</b></u>ited - cited data is more credible</li>
+              </ul>
+                <h3 class="methodsHead">Data Ethics</h3>
+              <ul>
+                  <li>Ownership - Individuals own the raw data they provide</li>
+                  <li>Transaction transparency - All data-processing activies and algorithms should be completely explainable and understood by the invidual two provides their data</li>
+                  <li>Consent - An indiviuals right to know explicit details about how and why their data will be used before agreeing to provide it </li>
+                  <li>Currency - Individuals should be aware of financial transactions resulting from the use of thier personal data and the scale of these transactions</li>
+                  <li>Privacy - Preserving a data subject's information and activity any time a data transaction occurs</li>
+                  <ul>
+                    <li>Data anonymization - Proctecting prople's private or senstitve data by eliminating that kind of information</li>
+                    <li>De-identification - a process used to wipe data clean of all personally identifying information</li>
+                  </ul>
+                  <li>Openness - Free access, usage, and sharing of data</li>
+                  </ul>
+              </ul>
+              <br>
+              <br>
+              <p>Reference:<br>
+              Google Data Analytics Professional Certificate (n.d.).<em>Prepare Data for Exploration</em>. Coursera<br>
+              <a href="https://www.coursera.org/professional-certificates/google-data-analytics">https://www.coursera.org/professional-certificates/google-data-analytics</a>
+              </p>
+
             </div>  
           </div>
         </div>
