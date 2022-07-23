@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>Wildlife Locations | ArcGIS Quick Capture</title>
+    <meta name="description" content="Documenting Wildlife Locations using ArcGIS Quick Capture">
+    <meta name="author" content="Nevin Mcintyre">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="/favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ba1862a7d2.js" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  <body>
+  
+    <header id="header">
+        <img src="/logo.png">
+        <!-- <h1>NMGIS</h1> -->
+        
+        <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+        <ul class="main-menu">
+          <li hidden><a href="#WildLifeLocations"></a></li>
+          <li><a href="https://nevinm.com/#about">About</a></li>
+          <li><a href="https://nevinm.com/#projects">Projects</a></li>
+          <li><a href="https://nevinm.com/#data">Data</a></li>
+          <li><a href="https://nevinm.com/#resources">Resources</a></li>
+        </ul>                 
+      </header>
+     
+      <div id="container">
+        <div class="inner">
+          <div id="content"> 
+            <div id="WildLifeLocations" class="content-region hide">
+              <h2 class="projecthead">Wildlife Locations | ArcGIS Quick Capture</h1>
+              <br>
+              <p><a href="https://www.esri.com/en-us/arcgis/products/arcgis-quickcapture/overview">ArcGIS Quick Capture</a> provides a great way to quickly capture data via mobile device. Setup up is quite easy and once it's up-and-running, it operates as smooth as butter. For all my personal projects, I utilize the <a href="https://www.esri.com/en-us/arcgis/products/arcgis-for-personal-use/buy">ArcGIS for Personal Use license</a>. If you have any questions or you would like assistance staging a project like this, please reach out!</p>
+              <h4 class="subHead">Brief Overview of Methods</h4>
+              <ol>
+                <li>Create a hosted feature layer, and design the schema</li>
+                <li>Log into <a href="https://www.arcgis.com/apps/quickcapture/">Quick Capture</a>, create and stage a new project | choose "start from existing layers"</li>
+                <li>Download app on app store, login and select project</li>
+                <li>Capture data</li>
+                <li>Create a <a href="https://doc.arcgis.com/en/arcgis-online/manage-data/create-hosted-views.htm">hosted feature layer view</a> *</li>
+                <li>Create a web map, add the hosted feature layer</li>
+                <li>Create a web application which is driven by the above web app</li>
+              </ol>
+              <p style="font-size:smaller">*Note: A hosted feature layer view is used to serve the web application. It is necessary to keep the original hosted feature layer private and un-editable by the public.</p>
+              <h4 class="subHead">Wildlife Locations Web Application</h4>
+              <a href="https://nevinmcintyregis.maps.arcgis.com/apps/instant/attachmentviewer/index.html?appid=b2c3ff9539434854b126000c7914f900"><img src="/mappng/WildlifeLocationsLarge.png" alt="Wildlife Locations Web Application Screenshot" class="largepng"></a>
+              <p style="text-align:center"><a href="https://nevinmcintyregis.maps.arcgis.com/apps/instant/attachmentviewer/index.html?appid=b2c3ff9539434854b126000c7914f900">View Map</a></p>
+              <h4 class="subHead">Quick Capture Demo</h4>
+              <p>Video Comming Soon</p>
+              <p>The icons I've used are from <a href="https://www.flaticon.com/">Flaticon</a>. You can find all the links to the individual authors within the web application and below:</p>
+              <ul>
+                <li>https://www.flaticon.com/authors/freepik</li>
+                <li>https://www.flaticon.com/authors/culmbio</li>
+                <li>https://www.flaticon.com/authors/culmbio</li>
+                <li>https://www.flaticon.com/authors/chanut-is-industries</li>
+                <li>https://www.flaticon.com/authors/bsd</li>
+                <li>https://www.flaticon.com/authors/smalllikeart</li>
+                <li>https://www.flaticon.com/authors/maxicons</li>
+                <li>https://www.yappy.com/us/australiancattledog</li>
+              </ul>
+              <h4 class="subHead">Backstory</h4>
+              <p>I hike alot! Rajah, my dog, pretty much forces me to hike. In effort to document some of the wildlife, which Rajah doesn't chase away, I decided to stage a Quick Capture project. Quick Capture allows me to take a photo and capture the geolocation of the animal with only a few button clicks. The data is automatically uploaded to my ArcGIS Online account; if I'm offline, it will upload the next time I'm connected to the internet. Ideally, I would like to create a Quick Capture shortcut which captures data with a single button press. I've tried to program this with IOS, but IOS shortcuts feel a little lackluster.</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <footer>
+        <a href="https://github.com/NMGIS"><i class="fab fa-github fa-3x"></i></a>
+        <a href="https://twitter.com/NevinMcIntyre"><i class="fab fa-twitter-square fa-3x"></i></a>
+        <a href="https://linkedin.com/in/nevinmcintyregis"><i class="fab fa-linkedin fa-3x"></i></a>
+      </footer>
+      
+      <!-- Load additional JS scripts here -->
+      <script type="text/javascript" src="/script.js"></script>
+        
+  </body>
+  </html>

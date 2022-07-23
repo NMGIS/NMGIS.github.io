@@ -169,6 +169,11 @@ ul.main-menu li a.active {
   text-decoration-color:#EF6D3D;
 }
 
+.subHead {
+  text-decoration: underline;
+  text-decoration-color:#EF6D3D;
+}
+
 .methodsHead {
   text-align: center;
   text-decoration: underline;
