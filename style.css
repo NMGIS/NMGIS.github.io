@@ -208,3 +208,8 @@ table, th, td {
   margin-left: auto;
   margin-right: auto;
 }
+
+.biasHeader {
+  text-align: center;
+  color:#08adca
+}
