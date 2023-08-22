@@ -215,3 +215,14 @@ table, th, td {
   text-align: center;
   color:#08adca
 }
+
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-x: auto;
+}
+code {
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+}
