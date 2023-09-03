@@ -3,9 +3,10 @@
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
-    <title>24/7 Supermaket Web Application</title>
-    <meta name="description" content="24/7 Supermarket web application">
+    <title>Core-Based Statistical Area Viewer</title>
+    <meta name="description" content="CORE-BASED STATISTICAL AREA VIEWER">
     <meta name="author" content="Nevin Mcintyre">
+    <meta name="keywords" content="census, mapbox, javascript, GIS, OMB, CBSA, CSA, MSA, management and budget">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="icon" type="image/png" href="/favicon.png">
   
@@ -35,7 +36,7 @@
         
         <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
         <ul class="main-menu">
-          <li hidden><a href="#247Supermarket"></a></li>
+          <li hidden><a href="#CBSAViewer"></a></li>
           <li><a href="https://nevinm.com/#about">About</a></li>
           <li><a href="https://nevinm.com/#projects">Projects</a></li>
           <li><a href="https://nevinm.com/#data">Data</a></li>
@@ -46,31 +47,40 @@
       <div id="container">
         <div class="inner">
           <div id="content"> 
-            <div id="247Supermarket" class="content-region hide">
-              <h2 class="projecthead">24/7 Supermarket Map</h2>
+            <div id="CBSAViewer" class="content-region hide">
+              <h2 class="projecthead">Core-Based Statistical Area Viewer</h2>
               <!-- <h2 style="text-align:center"><u style="text-decoration-color:#EF6D3D">24/7 Supermarket Map</u></h2> -->
               <br>
               <p>
-                I created an interactive map displaying 24/7 supermarkets in the contiguous U.S.A. The goal of this project was to build a living supermarket map; users are expected to add/remove stores as needed. The application displays two layers: At the initial extent, the dominant (largest count) store determines the symbology of each state. Once the map is zoomed in, individual point locations of stores are displayed. Please feel free to contribute. This map, data and instruction on how to contribute can be found on <a href= "https://github.com/NMGIS/24-7-Supermarket-Map.github.io">GitHub</a>. 
+                I've developed a web application using the Mapbox GL platform to explore a concept I've been interested in: cities and towns that straddle state lines yet share economic activities. In effort to better understand where these areas are located I looked at Census data and <a href = "https://en.wikipedia.org/wiki/Core-based_statistical_area">geographic statistical areas</a> defined by the OMB (Office of Management and Budget). If you're intrigued by this concept and would like to contribute to the appliction, I'd be delighted to collaborate with you.
               <br>
               <br>
-              <a href="https://nmgis.github.io/24-7-Supermarket-Map/"><img src="/mappng/SupermarketLarge.png" alt="Spokane WA, Crime" class="largepng"></a>
+              <a href="https://nevinm.com/CBSA-Geographic-Viewer/"><img src="https://raw.githubusercontent.com/NMGIS/CBSA-Geographic-Viewer/main/src/Thumbnail.png" alt="CBSA Web App" class="largepng"></a>
               <br>
-              <p style="text-align:center"><a href="https://nmgis.github.io/24-7-Supermarket-Map/">View Map</a></p>
+              <p style="text-align:center"><a href="https://nevinm.com/CBSA-Geographic-Viewer/">View Map</a></p>
               <br>
               <h4>What was used:</h4> 
               <p>
                 <ul>
-                  <li>ArcGIS API for Javascript 4.18</li>
+                  <li>Mapbox JS GL</li>
                   <li>GeoJSON</li>
+                  <li>Mapbox Vector Tileset</li>
                   <li>GitHub</li>
-                  <li>Pandas & GeoPandas</li>
-                  <li>Python 3.9.7</li>
+                  <li>ArcGIS Pro</li>
+                  <li>2020 Census Tiger/Line and tabular data</li>
                 </ul>
               </p>
-              <h4> How it works: </h4>
+              <h4>Upcomming Features</h4> 
               <p>
-                The ArcGIS API for Javascript drives the application. GitHub pages is used to host the application, data and execute a spatial join. Three GeoJSON layers are used: Stores.GeoJSON (point type), States.GeoJSON (polygon type), StatesCount.GeoJSON (polygon type). A spatial join occurs (to create the StatesCount.GeoJSON), whenever a store is added to the Stores.GeoJSON. GitHub actions executes this join by determining if the Stores.GeoJSON has been modified.
+                <ul>
+                  <li>Summary of population</li>
+                  <li>Demographic breakdown</li>
+                  <li>Census table upload</li>
+                  <li>Send me other ideas! Or get involved on Github!</li>
+                </ul>
+              </p>
+              <p>
+                View the code on <a href= "https://github.com/NMGIS/CBSA-Geographic-Viewer">GitHub</a>. 
               </p>
             </div>
             
