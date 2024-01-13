@@ -206,12 +206,27 @@ table, th, td {
 }
 
 .meIMG {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;  /* ensures the image is no wider than the div */
+  max-height: 100%; /* ensures the image is no taller than the div */
+  height: auto;     /* maintains the aspect ratio of the image */
+  display: block;   /* removes any extra space below the image */
+  margin: 0 auto;   /* optional: centers the image in the div if the div is wider */
 }
 
 .biasHeader {
   text-align: center;
   color:#08adca
+}
+
+figure {
+  /* Style for the figure element */
+  text-align: center; /* Center aligns the image and caption */
+  margin: auto; /* Adjusts the margin around the figure */
+}
+
+figcaption {
+  /* Style for the caption */
+  color: #ababab; /* Sets the caption text color */
+  margin-top: 8px; /* Spacing between image and caption */
+  font-style: italic; /* Makes the caption text italic */
 }
