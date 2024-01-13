@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>Parkway Fire dNBR</title>
+    <meta name="description" content="Parkway Fire bNBR analysis using Google Earth Engine">
+    <meta name="author" content="Nevin Mcintyre">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="/favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ba1862a7d2.js" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  <body>
+  
+    <header id="header">
+        <img src="/logo.png">
+        <!-- <h1>NMGIS</h1> -->
+        
+        <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+        <ul class="main-menu">
+          <li hidden><a href="#ParkwayFire"></a></li>
+          <li><a href="https://nevinm.com/#about">About</a></li>
+          <li><a href="https://nevinm.com/#projects">Projects</a></li>
+          <li><a href="https://nevinm.com/#data">Data</a></li>
+          <li><a href="https://nevinm.com/#resources">Resources</a></li>
+        </ul>                 
+      </header>
+     
+      <div id="container">
+        <div class="inner">
+          <div id="content"> 
+            <div id="ParkwayFire" class="content-region hide">
+              <h2 class="projecthead">Parkway dNBR - Google Earth Engine</h1>
+              <br>
+              <p>
+                Using Google Earth Engine, Landsat 9, and NIFC open data, I created an application to show the Normalized Burn Ratio (bNBR) of the Parkway Fire. The Parkway Fire began on 8/4/2022 which was located in Post Falls Community Forest (Quemlin Park) in Post Falls, Idaho. The fire is 100% contained which resulted in 80 acres of community forest burnt. An unattended campfire was deteremined the cause of the fire. 
+              </p>
+              <br>
+              <p>
+                Check out some critters found in the Post Falls Community Forest: <a href =https://nevinm.com/projects/WildlifeLocations>Quick Capture App</a>
+              </p>
+              <br>
+              <a href="https://nevinmcintyregis.users.earthengine.app/view/parkway-fire-dnbr"><img src="/mappng/ParkwayFireLarge.png" alt="Google Earth Engine Crooks Fire Application" class="largepng"></a>
+              <br>
+              <p style="text-align:center"><a href="https://nevinmcintyregis.users.earthengine.app/view/parkway-fire-dnbr">View Map</a></p>
+              <h3 class="methodsHead">Code Review</h3>
+              <p>Below is a code review of the JS used in this application. You can copy and paste the code below into your Google Earth Engine app for a starting points. If you need information on how to get started with Google Earth Engine, see my post on the Crooks Fire bNBR, or ask ChatGPT :D </p>
+                <br>
+              <p>
+                A little information on the LANDSAT collection and images. How to find and consume:
+                <ul>
+                  <li>I personally use <a href="https://earthexplorer.usgs.gov/">Earth Explorer</a> to locate and browse Landsat data </li>
+                  <li>I'll go to the desired area of interest, set a boundary, and search the Landsat Collection 2 Levels 1 & 2</li>
+                  <li>Once I find the image I need, Ill extract the information <b>from the title</b></li>
+                  <li> In the below example, I needed to replace: "043027_20230803"
+                  <li>var preFire = ee.Image('LANDSAT/LC09/C02/T1/LC09_043027_20230803');</li>
+                </ul>
+              </p>
+               <br>          
+                <pre><code>
+//This variable defines the symbology of the dNBR layer
+var nbrVis = {"opacity":1,"bands":["B5"],"min":-0.1,"max":0.39,"palette":["05c41c","a9ff00","000000","ff9f27","ff0000"]};
+//Create a geojson of the fire boundary
+var geojson = {}
+// use above geojson to create a feature collection.
+var geojsonFc = ee.FeatureCollection(geojson);
+
+// create the prefire and postfire variable, assign them to the landsat images of choice
+var preFire = ee.Image('LANDSAT/LC09/C02/T1/LC09_043027_20230803');
+var postFire = ee.Image('LANDSAT/LC09/C02/T1/LC09_043027_20230819');
+
+// preform the dNBR calculations 
+var preFireNBR = preFireb5.subtract(preFireb7).divide(preFireb5.add(preFireb7));
+var postFireNBR = postFireb5.subtract(postFireb7).divide(postFireb5.add(postFireb7));
+// preform the change in dNBR calcualtions
+var dNBR = preFireNBR.subtract(postFireNBR);
+print(dNBR);
+
+// style the geojson boundary
+var fcVis = geojsonFc.style({
+  color: 'purple',
+  fillColor: 'FF000000',
+});
+
+// clip the dNBR to the geojson
+var clippedNBR = dNBR.clipToCollection(geojsonFc);
+
+//add layers to map
+Map.setOptions("TERRAIN");
+Map.addLayer(clippedNBR, nbrVis, "dNBR");
+Map.addLayer(fcVis, "", "Crooks Fire");
+Map.centerObject(geojsonFc, 16) ;
+
+// Legend stuff
+
+// set position of panel
+var legend = ui.Panel({
+  style: {
+    position: 'bottom-left',
+    padding: '8px 15px'
+  }
+});
+
+// Create legend title
+var legendTitle = ui.Label({
+  value: 'bNBR Crooks Fire',
+  style: {
+    fontWeight: 'bold',
+    fontSize: '18px',
+    margin: '0 0 4px 0',
+    padding: '0'
+    }
+});
+
+// Add the title to the panel
+legend.add(legendTitle);
+    
+// Creates and styles 1 row of the legend.
+var makeRow = function(color, name) {
+      
+      // Create the label that is actually the colored box.
+      var colorBox = ui.Label({
+        style: {
+          backgroundColor: '#' + color,
+          // Use padding to give the box height and width.
+          padding: '8px',
+          margin: '0 0 4px 0'
+        }
+      });
+      
+      // Create the label filled with the description text.
+      var description = ui.Label({
+        value: name,
+        style: {margin: '0 0 4px 6px'}
+      });
+      
+      // return the panel
+      return ui.Panel({
+        widgets: [colorBox, description],
+        layout: ui.Panel.Layout.Flow('horizontal')
+      });
+};
+
+
+//  Palette with the colors
+var palette =["702963", "05c41c","a9ff00","000000","ff9f27","ff0000"];
+
+// name of the legend
+var names = ["Boundary", 'Unburned','Low Severity','Moderate-Low', 'Moderate-high', 'High severity'];
+
+// Add color and and names
+for (var i = 0; i < 6; i++) {
+  legend.add(makeRow(palette[i], names[i]));
+  }  
+
+// add legend to map (alternatively you can also print the legend to the console)  
+Map.add(legend);  
+                </code></pre>
+            </div>  
+          </div>
+        </div>
+      </div>
+  
+      <footer>
+        <a href="https://github.com/NMGIS"><i class="fa-brands fa-github fa-3x"></i></a>
+        <a href="https://twitter.com/NevinMcIntyre"><i class="fa-brands fa-x-twitter fa-3x"></i></a>
+        <a href="https://linkedin.com/in/nevinmcintyregis"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+      </footer>
+      
+      <!-- Load additional JS scripts here -->
+      <script type="text/javascript" src="/script.js"></script>
+        
+  </body>
+  </html>

@@ -3,9 +3,10 @@
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
-    <title>Spokane Washington Crime Dashboard</title>
-    <meta name="description" content="Spokane Wasington Crime dashboard using 2021 Compstat data">
+    <title>Core-Based Statistical Area Viewer</title>
+    <meta name="description" content="CORE-BASED STATISTICAL AREA VIEWER">
     <meta name="author" content="Nevin Mcintyre">
+    <meta name="keywords" content="census, mapbox, javascript, GIS, OMB, CBSA, CSA, MSA, management and budget">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="icon" type="image/png" href="/favicon.png">
   
@@ -35,7 +36,7 @@
         
         <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
         <ul class="main-menu">
-          <li hidden><a href="#SpokaneCrime"></a></li>
+          <li hidden><a href="#CBSAViewer"></a></li>
           <li><a href="https://nevinm.com/#about">About</a></li>
           <li><a href="https://nevinm.com/#projects">Projects</a></li>
           <li><a href="https://nevinm.com/#data">Data</a></li>
@@ -46,16 +47,41 @@
       <div id="container">
         <div class="inner">
           <div id="content"> 
-            <div id="SpokaneCrime" class="content-region hide">
-              <h2 class="projecthead">Spokane WA, Crime - 2021 CompStat Report Visualization</h1>
+            <div id="CBSAViewer" class="content-region hide">
+              <h2 class="projecthead">Core-Based Statistical Area Viewer</h2>
+              <!-- <h2 style="text-align:center"><u style="text-decoration-color:#EF6D3D">24/7 Supermarket Map</u></h2> -->
               <br>
               <p>
-                According to <a href="https://www.alarms.org/top-100-most-dangerous-cities-in-america/" target="_blank" rel="noopener noreferrer">Alarms.org</a>, Spokane ranks #2 in the Top 100 Most Dangerous Large Cities in America. Spokane PD releases a weekly <a href="https://my.spokanecity.org/police/prevention/compstat/" target="_blank" rel="noopener noreferrer">CompStat</a> report geographically displaying crime totals within police districts. I've taken the 2021 year's end report and created a series of dashboards to better understand which crimes are occurring within each district. Spokane PD is in the process of switching to the <a href="https://www.fbi.gov/services/cjis/ucr/nibrs" target="_blank" rel="noopener noreferrer">NIBRS</a> which may better describe the extraordinarily high larceny rates. 2010 Census data was used to calculate crime per capita (CPC). This will be updated to the 2020 data once available.
+                I've developed a web application using the Mapbox GL platform to explore a concept I've been interested in: cities and towns that straddle state lines yet share economic activities. In effort to better understand where these areas are located I looked at Census data and <a href = "https://en.wikipedia.org/wiki/Core-based_statistical_area">geographic statistical areas</a> defined by the OMB (Office of Management and Budget). If you're intrigued by this concept and would like to contribute to the appliction, I'd be delighted to collaborate with you.
+              <br>
+              <br>
+              <a href="https://nevinm.com/CBSA-Geographic-Viewer/"><img src="https://raw.githubusercontent.com/NMGIS/CBSA-Geographic-Viewer/main/src/Thumbnail.png" alt="CBSA Web App" class="largepng"></a>
+              <br>
+              <p style="text-align:center"><a href="https://nevinm.com/CBSA-Geographic-Viewer/">View Map</a></p>
+              <br>
+              <h4>What was used:</h4> 
+              <p>
+                <ul>
+                  <li>Mapbox JS GL</li>
+                  <li>GeoJSON</li>
+                  <li>Mapbox Vector Tileset</li>
+                  <li>GitHub</li>
+                  <li>ArcGIS Pro</li>
+                  <li>2020 Census Tiger/Line and tabular data</li>
+                </ul>
               </p>
-              <br>
-              <a href="https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/page/Crime-Per-Capita/"><img src="/mappng/SpokaneCrimeLarge.png" alt="Spokane WA, Crime" class="largepng"></a>
-              <br>
-              <p style="text-align:center"><a href="https://experience.arcgis.com/experience/30236e315d8c4e599d0aed1c2903cca6/page/Crime-Per-Capita/">View Map</a></p>
+              <h4>Upcomming Features</h4> 
+              <p>
+                <ul>
+                  <li>Summary of population</li>
+                  <li>Demographic breakdown</li>
+                  <li>Census table upload</li>
+                  <li>Send me other ideas! Or get involved on Github!</li>
+                </ul>
+              </p>
+              <p>
+                View the code on <a href= "https://github.com/NMGIS/CBSA-Geographic-Viewer">GitHub</a>. 
+              </p>
             </div>
             
           </div>
