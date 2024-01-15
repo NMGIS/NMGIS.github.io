@@ -27,3 +27,40 @@
   });
   
 })(jQuery);
+
+function createRadarChart(canvasId, ratings) {
+  var ctx = document.getElementById(canvasId).getContext('2d');
+  var myRadarChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+          labels: ["Replayability", "Complexity", "Difficulty", "Parts Quantity & Portability", "Expansions", "Affordability", "Art Style & Theme"],
+          datasets: [{
+              label: 'Blood Rage',
+              data: ratings, // Input ratings array
+              borderColor: 'rgba(239,109,61, 0.8)',
+              backgroundColor: 'rgba(239,109,61,0.2)',
+          }]
+      },
+      options: {
+          plugins: {
+              legend: {
+                  display: false,
+              }
+          },
+          scales: {
+            r: {
+                angleLines: {
+                    display: true,
+                    color: 'white'
+                },
+                grid: {
+                  color: 'white' // Change grid line color to white
+              },
+                suggestedMin: 0,
+                suggestedMax: 5
+            }
+        },
+      }
+  });
+}
+
