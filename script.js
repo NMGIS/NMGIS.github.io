@@ -35,7 +35,7 @@ function createRadarChart(canvasId, ratings) {
       data: {
           labels: ["Replayability", "Complexity", "Difficulty", "Parts Quantity & Portability", "Expansions", "Affordability", "Art Style & Theme"],
           datasets: [{
-              label: 'Blood Rage',
+              label: 'rating',
               data: ratings, // Input ratings array
               borderColor: 'rgba(239,109,61, 0.8)',
               backgroundColor: 'rgba(239,109,61,0.2)',
