@@ -64,3 +64,44 @@ function createRadarChart(canvasId, ratings) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  populateDropdown();
+});
+
+function clearDropdown(dropdown) {
+  // Remove all options except the first one
+  while (dropdown.options.length > 1) {
+      dropdown.remove(1);
+  }
+}
+
+function populateDropdown() {
+  var gameItems = Array.from(document.querySelectorAll('.board-game .game-item'));
+  var dropdown = document.getElementById('gameDropdown');
+
+  clearDropdown(dropdown); // Clear existing options
+
+  // Sort games by score
+  gameItems.sort(function(a, b) {
+      var scoreA = parseFloat(a.querySelector('.game-score').textContent);
+      var scoreB = parseFloat(b.querySelector('.game-score').textContent);
+      return scoreB - scoreA;
+  });
+
+  // Populate dropdown
+  gameItems.forEach(function(item, index) {
+      var gameName = item.querySelector('.game-name').textContent.trim();
+      var gameScore = item.querySelector('.game-score').textContent.trim();
+      var optionText = `${gameName} - ${gameScore}`;
+      var option = new Option(optionText, index); // using index as value
+      dropdown.add(option);
+  });
+
+  // Add event listener for dropdown change
+  dropdown.addEventListener('change', function() {
+      var selectedGame = gameItems[this.value];
+      if (selectedGame) {
+          selectedGame.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+}
