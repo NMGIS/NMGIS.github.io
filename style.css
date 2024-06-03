@@ -231,3 +231,16 @@ figcaption {
   font-style: italic; /* Makes the caption text italic */
 }
 
+pre {
+  background-color: lightgray; /* Sets the background color */
+  padding: 10px; /* Adds padding inside the pre element */
+  border-radius: 4px; /* Rounds the corners of the pre element */
+  color: black; /* Sets the text color */
+  overflow-x: auto; /* Adds horizontal scrolling if the content is too wide */
+  font-family: monospace; /* Sets a monospaced font for the code */
+  white-space: pre-wrap; /* Ensures that text wraps within container */
+  word-break: break-word; /* Ensures words break if they are too long for the line */
+}
+code {
+  display: block; /* Ensures the code element behaves like a block element, taking the full width */
+}
