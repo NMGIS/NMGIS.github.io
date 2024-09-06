@@ -244,3 +244,9 @@ pre {
 code {
   display: block; /* Ensures the code element behaves like a block element, taking the full width */
 }
+
+.EHChart img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}

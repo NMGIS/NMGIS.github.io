@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>Boise Metropolitan Area Motor Vehicle Crash Emerging Hotspots and Space Time Cube</title>
+    <meta name="description" content="Boise Metropolitan Area Motor Vehicle Crash Emerging Hotspots and Space Time Cube">
+    <meta name="author" content="Nevin Mcintyre">
+    <meta name="keywords" content="ArcGIS Pro, Space Time Cube, GIS, Emerging Hot Spots">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="/favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ba1862a7d2.js" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>  
+    
+      <!-- Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    
+    <!-- Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  <body>
+  
+    <header id="header">
+        <img src="/logo.png">
+        <!-- <h1>NMGIS</h1> -->
+        
+        <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+        <ul class="main-menu">
+          <li hidden><a href="#CubeHotSpots"></a></li>
+          <li><a href="https://nevinm.com/#about">About</a></li>
+          <li><a href="https://nevinm.com/#projects">Projects</a></li>
+          <li><a href="https://nevinm.com/#data">Data</a></li>
+          <li><a href="https://nevinm.com/#resources">Resources</a></li>
+        </ul>                 
+      </header>
+     
+      <div id="container">
+        <div class="inner">
+          <div id="content"> 
+            <div id="CubeHotSpots" class="content-region hide">
+              <h2 class="projecthead">Motor Vehicle Crash Emerging Hotspots | Boise Metro Area</h2>
+              <br>
+              <a href="https://experience.arcgis.com/experience/2f98e2bd0c874381979c728b864cb57f/"><img src="../mappng/EMHSLarge.png" alt="Ada Canyon Vehicle Incident App" class="largepng"></a>
+              <br>
+              <p style="text-align: center;"><a href="https://experience.arcgis.com/experience/2f98e2bd0c874381979c728b864cb57f/">View the Web Experience here</a></p>
+              <br>
+              <p>I’ve been fascinated with ArcGIS Pro’s space-time cube and its statistical analysis capabilities. To explore this further, I analyzed motor vehicle crash data from the <a href ="https://data-iplan.opendata.arcgis.com/datasets/0b2144204ade4595997c592c625ca2c2_123/about">Idaho Transportation Department</a>. Focusing on the Boise Metropolitan Area, I created a space-time cube and conducted an emerging hotspot analysis. This analysis is more meaningful on a local scale due to the uneven distribution of roads in rural and urban areas. Below is an outline of my methodology and documentation of this analysis.</p>
+              <h4>STEP 1: Analyze Data | Geographic and Temporal</h4>
+              <p>A space time analysis requires some pre-review in effort to avoid bias. In effort to better understand the data I asked myself the following questions:
+                <ul>
+                  <li>How is the data geographically distributed? - This data displays the geographic point location of incidents. Incidents occur on roadways and are more frequent in urban areas.</li>
+                  <li>How is the data temporally distributed? - To understand this, I used ArcGIS Pro's visualize statistics tool.</li>
+                  <li class="EHChart"><img src="../mappng/Accidentschart.jpg" alt="Accidents 2020 chart"></li>
+                  <li>There is a notable drop-off in incidents from July 2012 to December 2012. This is likely due to incomplete data rather than an actual improvement in safe driving. Therefore, 2012 will be excluded from the analysis.</li>
+                  <li>Additionally, there is a slight decrease in data from March 2020 to May 2020. While it appears significant, it may not be substantial enough to skew the overall results.</li>
+                  <li>Lastly, the last recorded incident is in September 2023. Since data for the remaining months of 2023 are not included, 2023 will be excluded from the analysis.</li>
+                  <li>A calendar heat chart will also provide some insights to temporal bias. The chart below shows the data for 2005 which allows us to visualize any drops/gaps in the data.</li>
+                  <li class="EHChart"><img src="../mappng/CalHeat.jpg" alt="Accidents 2020 chart"></li>
+                </ul>
+              </p>
+              <h4>STEP 2: Subset Data | Geographic and Temporal</h4>
+              <ul>
+                <li>I subsetted the data to Canyon and Ada counties to obtain more accurate results. METHOD: Select by Location where data INTERSECTS Canyon/Ada counties. </li>
+                <li>Using Select by Attributes, I deleted the years which had missing data.</li>
+              </ul>
+              <h4>STEP 3: Create Space Time Cube By Aggregating Points | Parameters</h4>
+              <ul>
+                <li>Time Step Interval | Using 1-month intervals allows each bin to have enough data to be statistically significant. Seasonal patterns are captured but may not be fully modeled. Overall, it provides sufficient data granularity, balancing between too much or too little data. </li>
+                <li>Distance Interval | 330 feet is the estimated average length of a street block. By using 330 feet, I aim to capture all accidents occurring within a single street block.</li>
+              </ul>
+              <h4>STEP 4: Space Time Cube Explorer</h4>
+              <p>The <a href="https://spatialstats-analysis-1.hub.arcgis.com/pages/space-time-cube-explorer">Space time Cube Explorer</a> add-in enhances the way you can interact with the space-time cube. It streamlines the creation process with preset symbology and sliders.</p>
+              <h4>STEP 5: Emerging Hot Spot Analysis | Parameters</h4>
+              <ul>
+                <li>After trial and error, the k nearest neighbors conceptualization appeared to be the best choice. In rural areas, some features (incidents) occurred further away from other areas. K nearest neighbors ensured that some of these features had a minimum number of neighbors.</li>
+                <li>Using the Average Nearest Neighbor tool, I gathered that my data had a significant amount of clustering: Z score was a large negative number, p-value = 0.</li>
+                <li>Number of Spatial Neighbors = 15 | Using 15 spatial neighbors helped improve the analysis by providing a robust sample size for each point, ensuring that even in sparsely populated rural areas, each incident had enough neighboring data points to generate meaningful and reliable results. This balance between having too few and too many neighbors helped to capture local variations while maintaining statistical significance.</li>
+                <li>Neighborhood Time Step = 48 | This ensures that the previous 4 years of data are included as neighbors.</li></ul>
+              <h4>STEP 6: Results Discussion</h4>
+              <p>My analysis results show that highly trafficked areas consistently emerge as hotspots, while more rural areas experience sporadic incidents. By displaying these patterns, we can deduce that the model is accurately reflecting the spatial and temporal distribution of incidents. This validation supports the reliability of our hotspot analysis in identifying significant trends and areas of concern.</p>
+          </div>
+        </div>
+      </div>
+  
+      <footer>
+        <a href="https://github.com/NMGIS"><i class="fa-brands fa-github fa-3x"></i></a>
+        <a href="https://twitter.com/NevinMcIntyre"><i class="fa-brands fa-x-twitter fa-3x"></i></a>
+        <a href="https://linkedin.com/in/nevinmcintyregis"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+      </footer>
+      
+      <!-- Load additional JS scripts here -->
+      <script type="text/javascript" src="/script.js"></script>
+        
+  </body>
+  </html>
