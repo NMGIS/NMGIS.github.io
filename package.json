@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/NMGIS/NMGIS.github.io",
+  "homepage": "https://nevinm.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
