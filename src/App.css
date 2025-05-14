@@ -83,6 +83,20 @@ a:hover {
   color: white;
 }
 
+@media (max-width: 600px) {
+  .main-menu {
+    flex-wrap: wrap;             /* already included – keep it */
+    justify-content: center;     /* center the wrapped lines */
+    gap: .5rem;                   /* tighter spacing */
+  }
+
+  .main-menu li a {
+    font-size: 1rem;             /* slightly smaller text */
+    padding-bottom: 2px;
+  }
+}
+
+
 /* Content */
 .content-region {
   padding: 2rem;                          /* more space inside */
