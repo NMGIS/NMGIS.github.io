@@ -310,6 +310,16 @@ const boardGames = [
     youtube: [],
     ratings: [4.3, 3.2, 2.9, 4.4, 4.0, 4.5, 2.5]
   },
+    {
+    name: "Nuck-Tats",
+    url: "https://boardgamegeek.com/boardgame/386139/nuck-tats",
+    notes: [
+      "Social/Party",
+      "Art skills not needed, but helpful",
+    ],
+    youtube: [],
+    ratings: [2.5, 2.0, 2.0, 4.0, 1.8, 2.5, 2.0]
+  },
 ];
 
 // Auto-calculate score
