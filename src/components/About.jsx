@@ -23,10 +23,11 @@ const About = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fas fa-donate fa-1x"></i> Donate via PayPal
+          <i className="fas fa-donate fa-1x"></i>
         </a>
       </p>
-
+      <br/>
+      <p class="note" style={{ textAlign: "center" }}>Just rebuilt my site with React and Vite! Let me know if you spot any bugs. Thanks!</p>
       <figure style={{ textAlign: "center", marginTop: "2rem" }}>
         <img
           src="/images/Fam2.JPG"

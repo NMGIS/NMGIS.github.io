@@ -171,3 +171,7 @@ ul, ol {
 ul li, ol li {
   margin-bottom: 0.5rem;
 }
+.note {
+  font-size: 0.9em; /* or try 90% */
+  color: #888; /* optional: lighter color to further distinguish it */
+}
