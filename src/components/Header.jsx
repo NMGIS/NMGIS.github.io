@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <header id="header">
-      <img src="/logo.png" alt="Logo" />
+      <img src="/logo2.png" alt="Logo" />
       <ul className="main-menu">
         <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
         <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link></li>

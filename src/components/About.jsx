@@ -2,11 +2,7 @@ const About = () => {
   return (
     <div className="content-region" style={{ maxWidth: '800px', margin: '0 auto' }}>
       <p>
-        I'm Nevin McIntyre, a GIS Specialist supporting the{" "}
-        <a href="https://www.aphis.usda.gov/plant-protection-quarantine" target="_blank" rel="noopener noreferrer">
-          USDA Plant Protection and Quarantine
-        </a>{" "}
-        program in Northern Idaho. I have a strong background in deploying geospatial solutions for public agencies using the ESRI ecosystem and open-source tools like Python, GeoPandas, Leaflet, and QGIS.
+        I'm Nevin McIntyre, a GIS professional living in the Spokane – Coeur d'Alene area. I have a strong background in deploying geospatial solutions for public agencies using the ESRI ecosystem and open-source tools like Python, GeoPandas, Leaflet, and QGIS.
       </p>
       <br />
       <p>
