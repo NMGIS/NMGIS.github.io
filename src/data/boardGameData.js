@@ -84,7 +84,7 @@ const boardGames = [
     ratings: [3.0, 2.5, 3.8, 3.8, 3.0, 3.0, 2.7]
   },
   {
-    name: "Minecraft",
+    name: "Minecraft Builders & Biomes",
     url: "https://www.ravensburger.us/discover/games/minecraft/index.html",
     notes: [
       "Piece heavy, with a long setup time",
@@ -252,7 +252,40 @@ const boardGames = [
       "Limited strategies",
     ],
     youtube: [],
-    ratings: [3.0, 2.8, 4.0, 4.5, 0, 4.5, 2.0]
+    ratings: [2.7, 2.8, 4.0, 4.5, 2.5, 4.5, 2.0]
+  },
+  {
+    name: "The Fox in the Forest",
+    url: "https://boardgamegeek.com/boardgame/221965/the-fox-in-the-forest",
+    notes: [
+      "Lightweight and quick",
+      "Trick-Taking, Hand Management",
+      "Pick up and play",
+    ],
+    youtube: [],
+    ratings: [2.7, 2.8, 4.0, 4.5, 2.5, 4.5, 3.5]
+  },
+  {
+    name: "Nova Luna",
+    url: "https://pegasusna.com/products/board-games/16564/nova-luna",
+    notes: [
+      "Abstract Strategy, Pattern Building, Spatial Puzzle",
+      "Replayability is great",
+      "Easy to learn and inviting",
+    ],
+    youtube: [],
+    ratings: [3.6, 3.3, 3.8, 3.2, 2.5, 3.3, 3.0]
+  },
+    {
+    name: "Forbidden Island",
+    url: "https://boardgamegeek.com/boardgame/65244/forbidden-island",
+    notes: [
+      "Cooperative!",
+      "Forbidden Desert, Jungle & Sky are very similar",
+      "Great for all ages",
+    ],
+    youtube: [],
+    ratings: [2.7, 2.5, 2.5, 3.2, 2.5, 3.4, 2.5]
   },
 ];
 
