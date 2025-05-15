@@ -276,7 +276,7 @@ const boardGames = [
     youtube: [],
     ratings: [3.6, 3.3, 3.8, 3.2, 2.5, 3.3, 3.0]
   },
-    {
+  {
     name: "Forbidden Island",
     url: "https://boardgamegeek.com/boardgame/65244/forbidden-island",
     notes: [
@@ -286,6 +286,29 @@ const boardGames = [
     ],
     youtube: [],
     ratings: [2.7, 2.5, 2.5, 3.2, 2.5, 3.4, 2.5]
+  },
+  {
+    name: "Dune Imperium",
+    url: "https://www.direwolfdigital.com/dune-imperium/",
+    notes: [
+      "I have only played the IOS version. I imagine the physical copy is piece heavy",
+      "Deckbuilder lite (in my opinion)",
+      "Great replay value",
+    ],
+    youtube: [],
+    ratings: [4.0, 3.8, 3.0, 2.5, 2.5, 2.5, 3.7]
+  },
+  {
+    name: "Tranquility",
+    url: "https://boardgamegeek.com/boardgame/288513/tranquility",
+    notes: [
+      "Cooperative!",
+      "Must be played silently",
+      "Easy to learn",
+      "Will always have replay value",
+    ],
+    youtube: [],
+    ratings: [4.3, 3.2, 2.9, 4.4, 4.0, 4.5, 2.5]
   },
 ];
 
