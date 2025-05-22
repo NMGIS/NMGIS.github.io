@@ -1,4 +1,19 @@
 export const projects = [
+    //Tj Suitability
+    {
+        slug: 'Trader Joe\'s Suitability',
+        title: 'Trader Joes\'s Suitability',
+        image: '/mappng/TJSuitability.png',
+        appLink: 'https://nevinm.com/trader-joes-suitability/',
+        github: 'https://github.com/NMGIS/trader-joes-suitability',
+        stack: [
+            'React.js',
+            'ArcGIS API for Javascript',
+            'ESRI Living Atlas',
+            'Feature Services'
+        ],
+        details: `This web app identifies high-potential locations for Trader Joe’s by analyzing demographic, economic, and walkability data at the block group level. Users can explore suitability scores, visualize service areas, and interact with multiple data layers to compare locations. This app is still in beta!.`
+    },
     //Thrift Book Detection
     {
         slug: 'thrift-book-detection',
