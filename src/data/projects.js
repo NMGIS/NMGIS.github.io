@@ -2,7 +2,7 @@ export const projects = [
     //Tj Suitability
     {
         slug: 'Trader Joe\'s Suitability',
-        title: 'Trader Joes\'s Suitability',
+        title: 'Trader Joe\'s Suitability',
         image: '/mappng/TJSuitability.png',
         appLink: 'https://nevinm.com/trader-joes-suitability/',
         github: 'https://github.com/NMGIS/trader-joes-suitability',
