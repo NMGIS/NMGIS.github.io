@@ -10,9 +10,12 @@ export const projects = [
             'React.js',
             'ArcGIS API for Javascript',
             'ESRI Living Atlas',
-            'Feature Services'
+            'Feature Services',
+            'GeoJSON',
+            'Github Actions',
+            'Open Routing Service'
         ],
-        details: `This web app identifies high-potential locations for Trader Joe’s by analyzing demographic, economic, and walkability data at the block group level. Users can explore suitability scores, visualize service areas, and interact with multiple data layers to compare locations. This app is still in beta!.`
+        details: `This web app identifies high-potential locations for Trader Joe’s by analyzing demographic, economic, and walkability data at the block group level. Users can explore suitability, visualize service areas, and interact with multiple data layers to compare locations.`
     },
     //Thrift Book Detection
     {
