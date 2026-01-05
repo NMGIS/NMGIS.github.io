@@ -1,4 +1,27 @@
 export const projects = [
+    //COC PIT
+    {
+        slug: 'COCPIT',
+        title: 'CoC-PIT: U.S. Homelessness Data Explorer',
+        image: '/mappng/COCPIT.png',
+        appLink: 'https://nevinm.com/CoC-PIT/',
+        github: 'https://github.com/NMGIS/CoC-PIT',
+        stack: [
+            'React.js',
+            'Vite',
+            'ArcGIS API for Javascript',
+            'Supabase',
+            'PostgreSQL',
+            'ChatGPT',
+            'Feature Services',
+            'Github Actions'
+        ],
+        details: `This application visualizes U.S. Continuum of Care (CoC) Point-in-Time (PIT) homelessness data by year, population group, and shelter type.
+
+The data are based on HUD’s PIT counts, which measure the number of sheltered and unsheltered people experiencing homelessness on a single night in late January. This dashboard uses 2007–2024 PIT counts aggregated at the CoC level and displayed using HUD Continuum of Care boundary datasets.
+
+PIT data are reported by local CoCs to HUD and undergo limited federal quality review. Any missing, incomplete, or inconsistent values reflect gaps or limitations in the original HUD PIT survey submissions, not the application itself. Counts may vary across locations and years due to differences or changes in local counting methods and should be interpreted as a snapshot in time rather than an annual total.`
+    },
     //Tj Suitability
     {
         slug: 'Trader Joe\'s Suitability',
