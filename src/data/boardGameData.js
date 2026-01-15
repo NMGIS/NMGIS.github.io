@@ -320,6 +320,53 @@ const boardGames = [
     youtube: [],
     ratings: [2.5, 2.0, 2.0, 4.0, 1.8, 2.5, 2.0]
   },
+  {
+    name: "Havalandi",
+    url: "https://boardgamegeek.com/boardgame/396543/havalandi",
+    notes: [
+      "Abstract strategy",
+      "Vibrant colorful theme",
+      "The double sided game board and strategy contributes to the replay value",
+      "Scoring can be complex for inexperienced gamers",
+    ],
+    youtube: [],
+    ratings: [3.8, 3.5, 4.0, 4.0, 3, 2.8, 4.0]
+  },
+  {
+    name: "Final Girl",
+    url: "https://vanrydergames.com/pages/final-girl?srsltid=AfmBOoo98lS4499ZS_JQOpkMZt7FcQ1dgZK70gXLifGUYzpCvoeddCty",
+    notes: [
+      "Single player horror",
+      "Setup is daunting for how small the box is",
+      "Difficult and relies too heavily on dice rolls",
+      "Plenty of expansions, but they give off a cash-grab vibe",
+      "Honestly should be a mobile app instead of a board game"
+    ],
+    youtube: [],
+    ratings: [3.8, 3, 3.2, 3.5, 3, 1.5, 4.2]
+  },
+  {
+    name: "Flip 7",
+    url: "https://boardgamegeek.com/boardgame/420087/flip-7",
+    notes: [
+      "Better than Uno?",
+      "Push your luck, with a few pvp mechanics",
+      "Easy and fun to learn",
+    ],
+    youtube: [],
+    ratings: [3.5, 2.8, 3.5, 5, 2.5, 5, 2]
+  },
+  {
+    name: "Skyjo",
+    url: "https://boardgamegeek.com/boardgame/204135/skyjo",
+    notes: [
+      "Better than Uno?",
+      "Memory + push your luck",
+      "Can pvp by ending the game early",
+    ],
+    youtube: [],
+    ratings: [3.5, 2.8, 3.5, 4.3, 2.5, 3.5, 1]
+  },
 ];
 
 // Auto-calculate score
