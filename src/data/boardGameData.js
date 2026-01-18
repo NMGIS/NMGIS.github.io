@@ -33,7 +33,7 @@ const boardGames = [
 
     ],
     youtube: ["https://www.youtube.com/watch?v=k3aLaVfnfxw"],
-    ratings: [5.0, 3.5, 4.5, 3.0, 3.5, 4.5, 2.5]
+    ratings: [3.8, 3.5, 4.0, 3.0, 3.5, 4.5, 2.5]
   },
   {
     name: "Air, Land, & Sea",
@@ -305,10 +305,9 @@ const boardGames = [
       "Cooperative!",
       "Must be played silently",
       "Easy to learn",
-      "Will always have replay value",
     ],
     youtube: [],
-    ratings: [4.3, 3.2, 2.9, 4.4, 4.0, 4.5, 2.5]
+    ratings: [3.6, 3.2, 2.9, 4.4, 4.0, 4.5, 2.5]
   },
     {
     name: "Nuck-Tats",
