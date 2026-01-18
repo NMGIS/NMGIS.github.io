@@ -367,6 +367,19 @@ const boardGames = [
     youtube: [],
     ratings: [3.5, 2.8, 3.5, 4.3, 2.5, 3.5, 1]
   },
+  {
+    name: "Istanbul",
+    url: "https://boardgamegeek.com/boardgame/148949/istanbul",
+    notes: [
+      "Piece heavy and daunting at first glance, but surprisingly simple",
+      "I wish there was an additional PVP mechanic",
+      "A mobile version is available, but unlike many online reviews, I prefer the physical edition",
+      "I haven’t played the expansions, but I can see the game becoming repetitive without them",
+      "Seems pricey at the time of this review (2026). mobile is cheap."
+    ],
+    youtube: [],
+    ratings: [3.8, 3.8, 4.2, 3.5, 3.8, 2.8, 4.0]
+  },
 ];
 
 // Auto-calculate score
