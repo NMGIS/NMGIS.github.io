@@ -1,4 +1,20 @@
 export const projects = [
+    // Spatial Index
+    {
+        slug: 'spatial-index',
+        title: 'Spatial Indexing Performance Demo',
+        image: '/mappng/SpatialIndex.png',
+        appLink: 'https://nevinm.com/SpatialIndex/',
+        github: 'https://github.com/NMGIS/SpatialIndex',
+        stack: [
+            'Leaflet',
+            'Supabase',
+            'PostgreSQL',
+            'PostGIS',
+            'GitHub Actions'
+        ],
+        details: `This application demonstrates the performance difference between spatially indexed and non-indexed PostGIS queries. Both maps query identical datasets stored in Supabase (PostgreSQL + PostGIS) — one table has a GiST spatial index on the geometry column, and the other does not. Pan and zoom the maps, run bounding box queries, and watch the scoreboard to see how spatial indexing impacts query speed. Query order is randomized to account for database caching effects.`
+    },
     //COC PIT
     {
         slug: 'COCPIT',
