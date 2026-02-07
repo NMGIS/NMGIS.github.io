@@ -24,22 +24,6 @@ const Resources = () => {
         <li><a href="https://datasets.wri.org/dataset">World Resources Institute (WRI)</a></li>
         <li><a href="https://www.arcgis.com/index.html">ArcGIS Online</a></li>
       </ul>
-
-      <h3>Data Science</h3>
-      <ul>
-        <li><a href="https://rmarkdown.rstudio.com/gallery.html">R Markdown Gallery</a></li>
-        <li><a href="https://datastudio.google.com/gallery">Google Data Studio</a></li>
-        <li><a href="https://public.tableau.com/app/discover/viz-of-the-day">Tableau Viz of the Day</a></li>
-        <li><a href="https://datavizcatalogue.com/#google_vignette">Data Visualization Catalogue</a></li>
-        <li><a href="https://go.carto.com/ebooks/spatial-data-science">Carto eBook: Becoming a Spatial Data Scientist</a></li>
-      </ul>
-
-      <h3>Spatial SQL</h3>
-      <ul>
-        <li><a href="https://postgis.net/workshops/postgis-intro/index.html">Intro to PostGIS</a></li>
-        <li><a href="https://learnsql.com/blog/sql-basics-cheat-sheet">SQL Basics Cheat Sheet</a></li>
-        <li><a href="https://www.postgresqltutorial.com/">PostgreSQL Tutorial</a></li>
-      </ul>
     </div>
   );
 };
