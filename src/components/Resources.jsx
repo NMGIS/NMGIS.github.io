@@ -23,6 +23,7 @@ const Resources = () => {
         <li><a href="https://data.globalforestwatch.org/">Global Forest Watch</a></li>
         <li><a href="https://datasets.wri.org/dataset">World Resources Institute (WRI)</a></li>
         <li><a href="https://www.arcgis.com/index.html">ArcGIS Online</a></li>
+        <li><a href="https://source.coop/">Source Cooperative</a></li>
       </ul>
     </div>
   );
