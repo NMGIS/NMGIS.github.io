@@ -379,6 +379,19 @@ const boardGames = [
     youtube: [],
     ratings: [3.8, 3.8, 4.2, 3.5, 3.8, 2.8, 4.0]
   },
+  {
+    name: "The Bears and The Bees",
+    url: "hhttps://boardgamegeek.com/boardgame/257372/the-bears-and-the-bees",
+    notes: [
+      "Simple and portable",
+      "More players = more fun",
+      "Better than Uno?",
+      "Expansions could really improve tthe games complexity",
+      "Theres not much to say with simple games like this, but if it the price is right, grab it"
+    ],
+    youtube: [],
+    ratings: [3.8, 2.8, 4.2, 4.5, 1, 3.8, 3.5]
+  },
 ];
 
 // Auto-calculate score
