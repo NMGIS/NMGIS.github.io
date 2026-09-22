@@ -379,7 +379,7 @@ const boardGames = [
     youtube: [],
     ratings: [3.8, 3.8, 4.2, 3.5, 3.8, 2.8, 4.0]
   },
-    {
+  {
     name: "Loot N' Loaded",
     url: "https://boardgamegeek.com/boardgame/353941/loot-n-loaded",
     notes: [
@@ -390,7 +390,19 @@ const boardGames = [
     youtube: [],
     ratings: [3.5, 3.0, 4.5, 3.5, 3.0, 2.5, 2.5]
   },
-      {
+  {
+    name: "Dutch Blitz",
+    url: "https://boardgamegeek.com/boardgame/148203/dutch-blitz",
+    notes: [
+      "Easy setup & learning curve",
+      "Great for 2 players, also great with 4+",
+      "No real expansions except for additional players",
+      "Could be cheaper for what you are getting"
+    ],
+    youtube: [],
+    ratings: [4.8, 4.5, 4.5, 4.5, 1.0, 3.5, 1.5]
+  },
+  {
     name: "Just One",
     url: "https://boardgamegeek.com/boardgame/254640/just-one",
     notes: [
