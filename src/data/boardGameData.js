@@ -388,7 +388,7 @@ const boardGames = [
       "Could use additional strategy"
     ],
     youtube: [],
-    ratings: [3.0, 3.0, 4.5, 4.5, 3.0, 2.5, 2.5]
+    ratings: [3.5, 3.0, 4.5, 3.5, 3.0, 2.5, 2.5]
   },
       {
     name: "Just One",
@@ -400,7 +400,7 @@ const boardGames = [
       "Not sure if expansions exist, but they do not appear to be readily available online"
     ],
     youtube: [],
-    ratings: [3.8, 3.0, 4.5, 3.8, 2.0, 3.0, 2.0]
+    ratings: [4.5, 3.0, 4.5, 3.8, 2.0, 3.0, 2.0]
   },
   {
     name: "The Bears and The Bees",
