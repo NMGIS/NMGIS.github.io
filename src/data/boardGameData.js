@@ -379,6 +379,29 @@ const boardGames = [
     youtube: [],
     ratings: [3.8, 3.8, 4.2, 3.5, 3.8, 2.8, 4.0]
   },
+    {
+    name: "Loot N' Loaded",
+    url: "https://boardgamegeek.com/boardgame/353941/loot-n-loaded",
+    notes: [
+      "Low difficulty party game with nerf guns",
+      "Shooting each other not required but recommended",
+      "Could use additional strategy"
+    ],
+    youtube: [],
+    ratings: [3.0, 3.0, 4.5, 4.5, 3.0, 2.5, 2.5]
+  },
+      {
+    name: "Just One",
+    url: "https://boardgamegeek.com/boardgame/254640/just-one",
+    notes: [
+      "Word guessing party game",
+      "Could be more difficult and complex, but not necessary",
+      "Would love additional cards and themes included with the base game",
+      "Not sure if expansions exist, but they do not appear to be readily available online"
+    ],
+    youtube: [],
+    ratings: [3.8, 3.0, 4.5, 3.8, 2.0, 3.0, 2.0]
+  },
   {
     name: "The Bears and The Bees",
     url: "hhttps://boardgamegeek.com/boardgame/257372/the-bears-and-the-bees",
