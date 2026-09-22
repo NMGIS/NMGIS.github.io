@@ -263,7 +263,7 @@ const boardGames = [
       "Pick up and play",
     ],
     youtube: [],
-    ratings: [2.7, 2.8, 4.0, 4.5, 2.5, 4.5, 3.5]
+    ratings: [2.5, 2.0, 4.0, 4.5, 1.0, 4.5, 3.5]
   },
   {
     name: "Nova Luna",
